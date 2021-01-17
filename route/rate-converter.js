@@ -8,6 +8,7 @@ const serverResp = (resData, res) => {
     results: resData.data,
   });
 };
+
 route.get("/api/rates", (req, res) => {
   //get all params
   const base = req.query.base;
@@ -17,7 +18,7 @@ route.get("/api/rates", (req, res) => {
       status: 400,
       data: {
         callSample:
-          "http://localhost:5000/api/rates?base=CZJ&currency=EUR,GBP,USD",
+          "https://currecncy-exchange.herokuapp.com/api/rates?base=CZJ&currency=EUR,GBP,USD",
       },
     };
     paramError.data.error = "Missing parameters: `base` or `currency`";
@@ -37,5 +38,17 @@ route.get("/api/rates", (req, res) => {
       return serverResp(err, res);
     });
 });
+
+route.get('*',(req,res)=>{
+    const paramError = {
+        status: 400,
+        data: {
+            message:"ops!!!. Find sample of how to call this Api in data.callSample property of this Object",
+          callSample:
+            "https://currecncy-exchange.herokuapp.com/api/rates?base=CZJ&currency=EUR,GBP,USD",
+        },
+      }
+    return serverResp(paramError,res)
+})
 
 module.exports = route;
