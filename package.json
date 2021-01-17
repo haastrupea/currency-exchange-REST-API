@@ -1,0 +1,21 @@
+{
+  "name": "currency-rate",
+  "version": "1.0.0",
+  "description": "Currency Rates REST API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "currency",
+    "exchange",
+    "rate",
+    "converter"
+  ],
+  "author": "Haastrup Elijah (@killcode)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  }
+}
