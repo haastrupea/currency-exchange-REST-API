@@ -45,7 +45,7 @@ route.get('*',(req,res)=>{
         data: {
             message:"ops!!!. Find sample of how to call this Api in data.callSample property of this Object",
           callSample:
-            "https://currecncy-exchange.herokuapp.com/api/rates?base=CZJ&currency=EUR,GBP,USD",
+            "https://currecncy-exchange.herokuapp.com/api/rates?base=CZK&currency=EUR,GBP,USD",
         },
       }
     return serverResp(paramError,res)
