@@ -43,7 +43,7 @@ route.get('*',(req,res)=>{
     const paramError = {
         status: 400,
         data: {
-            message:"ops!!!. Find sample of how to call this Api in data.callSample property of this Object",
+            message:"ops!!!. Find sample of how to call this Api in callSample property of this Object",
           callSample:
             "https://currecncy-exchange.herokuapp.com/api/rates?base=CZK&currency=EUR,GBP,USD",
         },
